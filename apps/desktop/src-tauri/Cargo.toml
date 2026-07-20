@@ -1,0 +1,33 @@
+[package]
+name = "prompt-asset-hub-desktop"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[lib]
+name = "prompt_asset_hub_desktop_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build.workspace = true
+
+[dependencies]
+pah-application = { path = "../../../crates/pah-application" }
+pah-db-sqlite = { path = "../../../crates/pah-db-sqlite" }
+pah-db-turso = { path = "../../../crates/pah-db-turso" }
+pah-domain = { path = "../../../crates/pah-domain" }
+pah-storage-local = { path = "../../../crates/pah-storage-local" }
+serde.workspace = true
+serde_json.workspace = true
+tauri.workspace = true
+tauri-plugin-dialog.workspace = true
+time.workspace = true
+tokio.workspace = true
+toml.workspace = true
+
+[lints]
+workspace = true
+
+[dev-dependencies]
+tempfile = "3"

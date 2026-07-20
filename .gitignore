@@ -1,0 +1,48 @@
+# Rust / Tauri build output
+/target/
+
+# Frontend dependencies and output
+/apps/web/node_modules/
+/apps/web/dist/
+
+# Workspace-scoped caches and runtime data
+/.cache/
+/.local/
+
+# Internal product and agent workflow documentation
+/docs/
+/AGENTS.md
+
+# Local environment overrides
+.env*
+!.env.example
+
+# Credentials, private keys, and signing material
+/.cargo/credentials
+/.cargo/credentials.toml
+.netrc
+credentials.json
+service-account*.json
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.mobileprovision
+id_rsa
+id_ed25519
+
+# IDE / OS
+.DS_Store
+.idea/
+.vscode/
+
+# Local databases and media exports outside the managed data root
+*.sqlite
+*.sqlite3
+*.db
+*.db-wal
+*.db-shm
+*.sqlite3-wal
+*.sqlite3-shm

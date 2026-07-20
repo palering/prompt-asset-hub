@@ -1,0 +1,33 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Prompt Asset Hub",
+  "version": "0.1.0",
+  "identifier": "app.prompt-asset-hub.desktop",
+  "build": {
+    "beforeDevCommand": "bash ../../scripts/npm-local.sh run dev -- --host 127.0.0.1 --port 1420",
+    "beforeBuildCommand": "bash ../../scripts/npm-local.sh run build",
+    "devUrl": "http://127.0.0.1:1420",
+    "frontendDist": "../../web/dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Prompt Asset Hub",
+        "width": 1440,
+        "height": 900,
+        "minWidth": 1024,
+        "minHeight": 700,
+        "dragDropEnabled": false,
+        "resizable": true
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; img-src 'self' asset: http://asset.localhost pah-media: http://pah-media.localhost blob: data:; style-src 'self' 'unsafe-inline'; connect-src ipc: http://ipc.localhost http://127.0.0.1:1420"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": ["icons/icon.png"]
+  }
+}
